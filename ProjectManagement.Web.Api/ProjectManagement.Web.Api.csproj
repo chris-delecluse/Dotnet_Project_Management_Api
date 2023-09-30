@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ProjectManagement.CQRS.Adapter\ProjectManagement.CQRS.Adapter.csproj" />
+      <ProjectReference Include="..\ProjectManagement.Database.Adapter\ProjectManagement.Database.Adapter.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Carter" Version="7.2.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
+
+</Project>
